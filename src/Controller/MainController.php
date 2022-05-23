@@ -12,45 +12,45 @@ class MainController extends AbstractController
     public function index(): Response
     {
         $slides = [
-            ['img_path' => '/uploads/slider/test-slider.jpg'],
-            ['img_path' => '/uploads/slider/test-slider.jpg'],
-            ['img_path' => '/uploads/slider/test-slider.jpg'],
+            ['img_path' => 'http://optvideo.com/ns/images/banners/all.jpg'],
+            ['img_path' => 'http://optvideo.com/ns/images/banners/all.jpg'],
+            ['img_path' => 'http://optvideo.com/ns/images/banners/all.jpg'],
         ];
         $banners = [
           [
               'title' => 'Title 1',
-              'img_path' => '/uploads/banner/test-banner-1.jpg',
+              'img_path' => 'http://optvideo.com/ns/images/banners/791.jpg',
               'content' => 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
           ],
             [
                 'title' => 'Title 2',
-                'img_path' => '/uploads/banner/test-banner-2.jpg',
+                'img_path' => 'http://optvideo.com/ns/images/banners/789.jpg',
                 'content' => 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
             ],
             [
                 'title' => 'Title 3',
-                'img_path' => '/uploads/banner/test-banner-3.jpg',
+                'img_path' => 'http://optvideo.com/ns/images/banners/790.jpg',
                 'content' => 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
             ],
             [
                 'title' => 'Title 4',
-                'img_path' => '/uploads/banner/test-banner-4.jpg',
+                'img_path' => 'http://optvideo.com/ns/images/banners/788.jpg',
                 'content' => 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
             ],
         ];
         $news = [
             [
-                'img_path' => '/uploads/news/test-news-1.jpg',
+                'img_path' => 'http://optvideo.com/ns/images/news/19may.jpg',
                 'content' => 'Some quick example text to build on the card title and make up the bulk of
                             the card\'s content.'
             ],
             [
-                'img_path' => '/uploads/news/test-news-2.jpeg',
+                'img_path' => 'http://optvideo.com/ns/images/news/tula18.jpeg',
                 'content' => 'Some quick example text to build on the card title and make up the bulk of
                             the card\'s content.'
             ],
             [
-                'img_path' => '/uploads/news/test-news-3.jpeg',
+                'img_path' => 'http://optvideo.com/ns/images/news/sp141.jpeg',
                 'content' => 'Some quick example text to build on the card title and make up the bulk of
                             the card\'s content.'
             ],
