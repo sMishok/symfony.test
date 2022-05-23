@@ -1,0 +1,70 @@
+{% extends 'main/layout.html.twig' %}
+
+{% block title %}Main | Главная{% endblock %}
+
+{% block container %}
+    <div class="container-fluid">
+
+        <div id="carouselSlider" class="carousel slide order-first" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselSlider" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                {% for slide in slides %}
+                    <div class="carousel-item {% if loop.first %} active {% endif %}">
+                        <img src="{{ asset(slide.img_path) }}" class="d-block w-100" alt="...">
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlider"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSlider"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 col-md-9 ms-sm-auto px-md-4 pt-3 order-md-first order-xl-first">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    {% for banner in banners %}
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body btn-outline-dark">
+                                    <h5 class="card-title text-center">{{ banner.title }}</h5>
+                                    <img src="{{ asset(banner.img_path) }}" class="card-img" alt="...">
+                                    <p class="card-text">{{ banner.content }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 pt-3 order-first">
+
+                {% for item in news %}
+                    <div class="card mb-2">
+                        <img src="{{ asset(item.img_path) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">{{ item.content }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
